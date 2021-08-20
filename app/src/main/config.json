@@ -1,0 +1,86 @@
+{
+  "app": {
+    "bundleName": "com.example.myhmfirstdemo",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "reqPermissions": [{"name": "ohos.permission.INTERNET"}, {"name": "ohos.permission.GET_NETWORK_INFO"}],
+    "package": "com.example.myhmfirstdemo",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.myhmfirstdemo.LaunchAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "value": "androidhwext:style/Theme.Emui.NoTitleBar"
+        }
+      ]
+    },
+    "colorMode": "auto",
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "app",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "orientation": "portrait",
+        "name": "com.example.myhmfirstdemo.LoginAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "configChanges": [
+          "orientation"
+        ],
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard",
+        "metaData": {
+          "customizeData": [
+            {
+              "name": "hwc-theme",
+              "value": "androidhwext:style/Theme.Emui.NoTitleBar"
+            }
+          ]
+        }
+      },
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "portrait",
+        "name": "com.example.myhmfirstdemo.LaunchAbility",
+        "icon": "$media:icon",
+        "configChanges": [
+          "orientation"
+        ],
+        "label": "$string:entry_launchAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "icon": "$media:icon",
+        "orientation": "portrait",
+        "launchType": "singleton",
+        "name": "com.example.myhmfirstdemo.MainAbility",
+        "description": "",
+        "type": "page"
+      }
+    ]
+  }
+}
